@@ -8,9 +8,9 @@ The Robot Rental System is a simple command-line application designed to manage 
 
 - [Features](#features)
 - [Files](#files)
+- [Structure and Algorithms](#code-structure-and-algorithms)
 - [Compilation](#compilation)
 - [Usage](#usage)
-- [Code Structure and Algorithms](#code-structure-and-algorithms)
 
 ## Features
 
@@ -30,28 +30,9 @@ The Robot Rental System is a simple command-line application designed to manage 
 - `MenuFunctions.h` and `MenuFunctions.cpp`: Implement functions related to the main menu options.
 - `Utilities.h` and `Utilities.cpp`: Provide utility functions, such as date validation.
 
-## Compilation
+# Structure and Algorithms
 
-To compile the project, use a C++ compiler such as g++:
-
-```bash
-g++ main.cpp Robot.cpp User.cpp MenuFunctions.cpp Utilities.cpp -o RobotRentalSystem
-```
-
-## Usage
-
-1. Compile the project as described in the Compilation section.
-2. Run the executable:
-
-```bash
-./RobotRentalSystem
-```
-
-3. Follow the on-screen instructions to navigate the menu and interact with the Robot Rental System.
-
-# Code Structure and Algorithms
-
-## Code Structure
+## Structure
 
 ### 1. Main Components
 
@@ -138,3 +119,23 @@ Function User.rentRobot(robot_name):
     AddRobotToUserRentedList(this, robot_name)
     DisplaySuccessMessage("Robot", robot_name, "rented successfully to", this.getName())
 ```
+
+
+## Compilation
+
+To compile the project, use a C++ compiler such as g++:
+
+```bash
+g++ main.cpp Robot.cpp User.cpp MenuFunctions.cpp Utilities.cpp -o RobotRentalSystem
+```
+
+## Usage
+
+1. Compile the project as described in the Compilation section.
+2. Run the executable:
+
+```bash
+./RobotRentalSystem
+```
+
+3. Follow the on-screen instructions to navigate the menu and interact with the Robot Rental System.
