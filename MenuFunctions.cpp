@@ -166,6 +166,60 @@ void searchUserByName(const std::vector<User>& users) {
 }
 
 void rentRobotToUser(std::vector<User>& users, std::vector<Robot>& robots) {
-    // Implementation as before
-    // ...
+    // Display all users
+    std::cout << "\n--- All Users ---\n";
+    for (size_t i = 0; i < users.size(); ++i) {
+        std::cout << i + 1 << ". " << users[i].getName() << "\n";
+    }
+
+    // Ask admin to choose a user
+    int user_choice;
+    std::cout << "Choose a user (enter the corresponding number): ";
+    std::cin >> user_choice;
+    std::cin.ignore(); // Consume the newline character
+
+    // Validate user choice
+    if (user_choice < 1 || user_choice > static_cast<int>(users.size())) {
+        std::cout << "Invalid user choice.\n";
+        return;
+    }
+
+    // Display available robots
+    std::cout << "\n--- Available Robots ---\n";
+    for (size_t i = 0; i < robots.size(); ++i) {
+        if (!robots[i].isRented()) {
+            std::cout << i + 1 << ". " << robots[i].getName() << "\n";
+        }
+    }
+
+    // Ask admin to choose a robot
+    int robot_choice;
+    std::cout << "Choose a robot to rent (enter the corresponding number): ";
+    std::cin >> robot_choice;
+    std::cin.ignore(); // Consume the newline character
+
+    // Validate robot choice
+    if (robot_choice < 1 || robot_choice > static_cast<int>(robots.size()) || robots[robot_choice - 1].isRented()) {
+        std::cout << "Invalid robot choice or the selected robot is already rented.\n";
+        return;
+    }
+
+    // Get the rental date
+    std::string rental_date;
+    std::cout << "Enter the rental date (in the format day/month/year): ";
+    std::getline(std::cin, rental_date);
+
+    // Validate the rental date
+    if (!isValidDate(rental_date)) {
+        std::cout << "Invalid date format.\n";
+        return;
+    }
+
+    // Rent the selected robot to the chosen user
+    users[user_choice - 1].rentRobot(robots[robot_choice - 1].getName());
+    robots[robot_choice - 1].setRented(true);
+    robots[robot_choice - 1].addDateRented(rental_date);
+
+    std::cout << "Robot rented successfully to " << users[user_choice - 1].getName() << " on " << rental_date << ".\n";
 }
+
