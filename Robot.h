@@ -1,32 +1,36 @@
-#ifndef ROBOT_H
-#define ROBOT_H
+#include "Robot.h"
 
-#include <string>
-#include <vector>
+// Constructor
+Robot::Robot(std::string name, std::vector<int> function_ids, double price_per_day)
+    : name(name), function_ids(function_ids), price_per_day(price_per_day), rented(false) {}
 
-class Robot {
-private:
-    std::string name;
-    std::vector<int> function_ids;
-    double price_per_day;
-    bool rented;
-    std::vector<std::string> dates_rented;
+// Getter methods
+std::string Robot::getName() const {
+    return name;
+}
 
-public:
-    Robot(std::string name, std::vector<int> function_ids, double price_per_day);
+std::vector<int> Robot::getFunctionIds() const {
+    return function_ids;
+}
 
-    // Getter methods
-    std::string getName() const;
-    std::vector<int> getFunctionIds() const;
-    double getPricePerDay() const;
-    bool isRented() const;
-    std::vector<std::string> getDatesRented() const;
+double Robot::getPricePerDay() const {
+    return price_per_day;
+}
 
-    // Setter method
-    void setRented(bool status);
+bool Robot::isRented() const {
+    return rented;
+}
 
-    // Other methods
-    void addDateRented(const std::string& date);
-};
+std::vector<std::string> Robot::getDatesRented() const {
+    return dates_rented;
+}
 
-#endif
+// Setter method
+void Robot::setRented(bool status) {
+    rented = status;
+}
+
+// Other methods
+void Robot::addDateRented(const std::string& date) {
+    dates_rented.push_back(date);
+}
