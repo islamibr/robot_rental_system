@@ -12,6 +12,7 @@ private:
     std::vector<std::string> robots_rented;
 
 public:
+    // Constructor
     User(std::string name, std::string telephone_number, std::string email);
 
     // Getter methods
