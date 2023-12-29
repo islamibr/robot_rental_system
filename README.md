@@ -10,8 +10,6 @@ The Robot Rental System is a simple command-line application designed to manage 
 - [Files](#files)
 - [Compilation](#compilation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -49,14 +47,3 @@ g++ main.cpp Robot.cpp User.cpp MenuFunctions.cpp Utilities.cpp -o RobotRentalSy
 ```
 
 3. Follow the on-screen instructions to navigate the menu and interact with the Robot Rental System.
-
-## Contributing
-
-Contributions are welcome! Feel free to open issues or pull requests.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-```
-
-Make sure to adjust the sections and content according to your project's specific details. This README provides a basic structure to help users understand your project, compile it, and get started.
