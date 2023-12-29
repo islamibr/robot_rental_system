@@ -53,11 +53,6 @@ The system is composed of the following main components:
 The code follows the principles of Object-Oriented Programming (OOP), encapsulating data and functionality into classes. This enhances code organization, promotes code reuse, and makes the system more modular.
 
 ## Algorithms
-
-Certainly! Below is an example template for a detailed report explaining the code structure and algorithms used in your Robot Rental System. You can use this template as a starting point and customize it based on the specifics of your implementation.
-
-# Robot Rental System - Code Structure and Algorithms Report
-
 ### 1. Renting a Robot to a User
 
 The `rentRobotToUser` function in `MenuFunctions.cpp` implements the algorithm for renting a robot to a user. Here is a high-level overview:
