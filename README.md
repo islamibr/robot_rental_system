@@ -54,7 +54,25 @@ The code follows the principles of Object-Oriented Programming (OOP), encapsulat
 
 ## Algorithms
 
+Certainly! Below is an example template for a detailed report explaining the code structure and algorithms used in your Robot Rental System. You can use this template as a starting point and customize it based on the specifics of your implementation.
+
+# Robot Rental System - Code Structure and Algorithms Report
+
 ### 1. Renting a Robot to a User
+
+The `rentRobotToUser` function in `MenuFunctions.cpp` implements the algorithm for renting a robot to a user. Here is a high-level overview:
+
+1. **Display All Users:** The function begins by displaying a list of all users, allowing the admin to choose a user.
+
+2. **Display Available Robots:** It then displays a list of available robots that are not currently rented.
+
+3. **User and Robot Selection:** The admin is prompted to choose a user and a robot for the rental.
+
+4. **Date Entry:** The function prompts the admin to enter the rental date.
+
+5. **Date Validation:** The entered date is validated using the `isValidDate` function from `Utilities.cpp` to ensure it follows the correct format.
+
+6. **Rent Robot:** If the user and robot selections are valid, and the date is valid, the robot is marked as rented, and the rental information is updated for the user.
 
 ```plaintext
 Function rentRobotToUser(users, robots):
@@ -83,6 +101,7 @@ Function RentRobot(robot, user, rental_date):
 ```
 
 ### 2. Search by Name
+Functions like `searchRobotByName` and `searchUserByName` in `MenuFunctions.cpp` implement the search algorithm. The algorithm involves iterating through the list of robots or users, comparing names, and displaying details if a match is found.
 
 ```plaintext
 Function searchRobotByName(robots):
@@ -113,6 +132,7 @@ Function searchUserByName(users):
 ```
 
 ### 3. User Robot Rental
+The `rentRobot` method in the `User` class (`User.cpp`) is responsible for adding a rented robot to the user's list of rented robots. It is a simple function that appends the robot's name to the user's list.
 
 ```plaintext
 Function User.rentRobot(robot_name):
